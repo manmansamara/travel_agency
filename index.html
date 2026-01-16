@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+        }
+        
+        ul.tours-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li.tour-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Agency Samara</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Наши адреса:</h2>
+            <p>Самара, Московское шоссе, 77</p>
+        </section>
+        <section>
+            <h2>Доступные туры:</h2>
+            <ul class="tours-list"></ul>
+        </section>
+    </div>
+    <footer>© Travel Agency Samara 2025</footer>
+
+    <!-- Скрипт для динамического наполнения списка туров -->
+    <script>
+        // Массив данных о турах (можно заменить на AJAX-запрос к серверу)
+        const toursData = [
+            {"id": 1, "name": "Путешествие по Европе", "duration": 10, "cost": 15000},
+            {"id": 2, "name": "Экскурсия по Крыму", "duration": 7, "cost": 10000},
+            {"id": 3, "name": "Путешествие по Азии", "duration": 14, "cost": 20000}
+        ];
+
+        // Функция для заполнения списка туров
+        function populateToursList() {
+            const toursListElement = document.querySelector('.tours-list');
+            
+            toursData.forEach((tour) => {
+                const item = `
+                    <li class="tour-item">
+                        Название: ${tour.name}<br>
+                        Длительность: ${tour.duration} дней<br>
+                        Стоимость: ${tour.cost} руб.<br>
+                    </li>
+                `;
+                
+                toursListElement.innerHTML += item;
+            });
+        }
+
+        window.onload = () => {
+            populateToursList();
+        };
+    </script>
+</body>
+</html>
