@@ -77,40 +77,15 @@
         </section>
         <section>
             <h2>Доступные туры:</h2>
-            <ul class="tours-list"></ul>
+            <ul class="tours-list">
+                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFMOW1&zoom=5.99">Туры по маршруту KUFMOW1</a></li>
+                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFIST1&zoom=5.99">Туры по маршруту KUFIST1</a></li>
+                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFMSQ1&zoom=5.99">Туры по маршруту KUFMSQ1</a></li>
+                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFDXB1&zoom=5.99">Туры по маршруту KUFDXB1</a></li>
+                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFNQZ1&zoom=5.99">Туры по маршруту KUFNQZ1</a></li>
+            </ul>
         </section>
     </div>
     <footer>© Travel Agency Samara 2025</footer>
-
-    <!-- Скрипт для динамического наполнения списка туров -->
-    <script>
-        // Массив данных о турах (можно заменить на AJAX-запрос к серверу)
-        const toursData = [
-            {"id": 1, "name": "Путешествие по Европе", "duration": 10, "cost": 15000},
-            {"id": 2, "name": "Экскурсия по Крыму", "duration": 7, "cost": 10000},
-            {"id": 3, "name": "Путешествие по Азии", "duration": 14, "cost": 20000}
-        ];
-
-        // Функция для заполнения списка туров
-        function populateToursList() {
-            const toursListElement = document.querySelector('.tours-list');
-            
-            toursData.forEach((tour) => {
-                const item = `
-                    <li class="tour-item">
-                        Название: ${tour.name}<br>
-                        Длительность: ${tour.duration} дней<br>
-                        Стоимость: ${tour.cost} руб.<br>
-                    </li>
-                `;
-                
-                toursListElement.innerHTML += item;
-            });
-        }
-
-        window.onload = () => {
-            populateToursList();
-        };
-    </script>
 </body>
 </html>
