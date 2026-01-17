@@ -1,91 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agency</title>
+    <title>Туристическая компания</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f4f4f9;
             color: #333;
             margin: 0;
             padding: 0;
         }
-        
         header {
             background-color: #007bff;
             color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
-        
         .container {
             max-width: 1200px;
-            margin: auto;
-            padding: 2rem;
+            margin: 0 auto;
+            padding: 20px;
         }
-        
-        h1 {
-            text-align: center;
-            color: #007bff;
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
         }
-        
-        section {
-            margin-bottom: 2rem;
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
-        
-        ul.tours-list {
-            list-style-type: none;
-            padding-left: 0;
+        .card-body {
+            padding: 20px;
         }
-        
-        li.tour-item {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
-        
-        a {
-            color: #007bff;
-            text-decoration: none;
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 10px;
         }
-        
         footer {
-            background-color: #333;
+            background-color: #007bff;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 20px;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Travel Agency Samara</h1>
+        <h1>Туристическая компания</h1>
     </header>
     <div class="container">
-        <section>
-            <h2>Наши адреса:</h2>
-            <p>Самара, Московское шоссе, 77</p>
-        </section>
-        <section>
-            <h2>Доступные туры:</h2>
-            <ul class="tours-list">
-                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFMOW1&zoom=5.99">Туры по маршруту KUFMOW1</a></li>
-                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFIST1&zoom=5.99">Туры по маршруту KUFIST1</a></li>
-                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFMSQ1&zoom=5.99">Туры по маршруту KUFMSQ1</a></li>
-                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFDXB1&zoom=5.99">Туры по маршруту KUFDXB1</a></li>
-                <li class="tour-item"><a href="https://www.aviasales.ru/?center=27.946%2C53.814¶ms=KUFNQZ1&zoom=5.99">Туры по маршруту KUFNQZ1</a></li>
-            </ul>
-        </section>
+        <div class="card">
+            <img src="image1.jpg" alt="Тур 1">
+            <div class="card-body">
+                <h2 class="card-title">На море</h2>
+                <p class="card-text">Продолжительность: 7 дней</p>
+                <p class="card-text">Направление: Самара - Сочи</p>
+                <p class="card-text">Цена: 150000 руб.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image2.jpg" alt="Тур 2">
+            <div class="card-body">
+                <h2 class="card-title">Альпийские каникулы</h2>
+                <p class="card-text">Продолжительность: 5 дней</p>
+                <p class="card-text">Направление: Москва - Инсбрук</p>
+                <p class="card-text">Цена: 210000 руб.</p>
+            </div>
+        </div>
+        <!-- Добавьте остальные туры аналогично -->
     </div>
-    <footer>© Travel Agency Samara 2025</footer>
+    <footer>
+        <p>Контакты: Абрамов Кирилл, <a href="https://t.me/turagenstvo_psuti_bot">@turagenstvo_psuti_bot</a></p>
+        <p>Адрес: Московское шоссе, 18а</p>
+    </footer>
 </body>
 </html>
